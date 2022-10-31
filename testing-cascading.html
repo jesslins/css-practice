@@ -6,8 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>External CSS</title>
     <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- This demonstrates how to create an internal stylesheet using the style tag. -->
+    <style>
+      /* 
+        This styles the body of the web page to have a font color of darkgray using the color CSS property.
+      */
+      body {
+        color: darkgray;
+      }
+
+      /*
+        This styles all h1 tags to be right aligned.
+      */
+      h1 {
+        text-align: right;
+      }
+    </style>
   </head>
-  <body>
+  <body style="color: darkmagenta">
     <nav>
       <ul>
         <li><a href="index.html">Inline CSS</a></li>
