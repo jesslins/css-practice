@@ -30,19 +30,55 @@
       p {
         font-size: 24px;
       }
+
+      #styled-by-id {
+        font-family: Georgia, Cambria, serif;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px;
+        border-style: solid;
+        border-color: black;
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      .nav-link li {
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="index.html">Inline CSS</a></li>
-        <li><a href="internal-css.html">Internal CSS</a></li>
-        <li><a href="external-css.html">External CSS</a></li>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li><a href="external-css.html" class="nav-link">External CSS</a></li>
         <li>
-          <a href="playing-with-external.html">Playing with External CSS</a>
+          <a href="playing-with-external.html" class="nav-link"
+            >Playing with External CSS</a
+          >
         </li>
-        <li><a href="testing-cascading.html">Testing Cascading CSS</a></li>
-        <li><a href="classes-and-ids.html">Classes and IDs</a></li>
+        <li>
+          <a href="testing-cascading.html" class="nav-link"
+            >Testing Cascading CSS</a
+          >
+        </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
+        </li>
       </ul>
     </nav>
 
@@ -52,6 +88,11 @@
       <p>This page shows the effects of adding internal CSS to a web page.</p>
 
       <p>Does this paragraph have the same styling as my other paragraph?</p>
+
+      <p id="styled-by-id">
+        This paragraph will show the effect of giving an element an ID and
+        styling that ID
+      </p>
     </main>
   </body>
 </html>
