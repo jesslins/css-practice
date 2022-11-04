@@ -4,59 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Internal CSS</title>
-
-    <!-- This demonstrates how to create an internal stylesheet using the style tag. -->
+    <title>Classes and IDs</title>
     <style>
-      /* 
-        This styles the body of the web page to have a background color of #f5f5ff,
-        which is white with a hint of blue, using the background-color CSS property
-        and a font color of midnightblue using the color CSS property.
-      */
       body {
         background-color: #f5f5ff;
         color: midnightblue;
       }
 
       /*
-        This styles all h1 tags to be center aligned and have a font size of 40 px.
+        This styles every ul that is inside the nav (due to descendant selectors)
+        to have no bullet points beside each list item in the ul.
       */
+      nav ul {
+        list-style: none;
+      }
+
+      /*
+        This styles every list item in the ul that is in the nav to have 10px of
+        margin, and a font size of 20px.
+      */
+      nav ul li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      /*
+        This styles the multiple elements with a class of nav-link to have
+        4px of margin, a 2px border that is a solid black line, padding of 5 px,
+        a background color of #191970, and a font color of #f5f5ff.
+      */
+      .nav-link {
+        margin: 4px;
+        border: 2px solid black;
+        padding: 5px;
+
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      /* This is the same code as above, but just using descendant selectors instead. */
+      /*
+        nav ul li a {
+          margin: 4px;
+          border: 2px solid black;
+          padding: 5px;
+
+          background-color: #191970;
+          color: #f5f5ff;
+        } 
+      */
+
       h1 {
         text-align: center;
         font-size: 40px;
       }
 
-      /* This styles all p tags to have a font size of 24 px. */
       p {
         font-size: 24px;
       }
 
+      /*
+        This styles the one element with an ID of styled-by-id to use the
+        Georgia font. If the Georgia font cannot be used, it uses Times New
+        Roman. If Times New Roman cannot be used, Cambria is used. If Cambria
+        cannot be used, the default serif font built into the browser is used.
+        It also styles the text to be bolded.
+      */
       #styled-by-id {
-        font-family: Georgia, Cambria, serif;
+        font-family: Georgia, "Times New Roman", Cambria, serif;
         font-weight: bold;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      li {
-        margin: 10px;
-        font-size: 20px;
-      }
-
-      .nav-link {
-        padding: 5px;
-        margin: 4px;
-        border: 2px;
-        border-style: solid;
-        border-color: black;
-        background-color: #191970;
-        color: #f5f5ff;
-      }
-
-      .nav-link li {
-        display: inline-block;
       }
     </style>
   </head>
@@ -67,23 +84,19 @@
         <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
         <li><a href="external-css.html" class="nav-link">External CSS</a></li>
         <li>
-          <a href="playing-with-external.html" class="nav-link"
-            >Playing with External CSS</a
-          >
-        </li>
-        <li>
-          <a href="testing-cascading.html" class="nav-link"
-            >Testing Cascading CSS</a
-          >
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
+          </a>
         </li>
         <li>
           <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
         </li>
+        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
       </ul>
     </nav>
 
     <main>
-      <h1>Internal CSS</h1>
+      <h1>Classes and IDs</h1>
 
       <p>This page shows the effects of adding internal CSS to a web page.</p>
 
@@ -91,7 +104,7 @@
 
       <p id="styled-by-id">
         This paragraph will show the effect of giving an element an ID and
-        styling that ID
+        styling that ID.
       </p>
     </main>
   </body>
